@@ -1,0 +1,106 @@
+##### PART 1: D = 50, 100, 200 with final settings #####
+
+=== D = 50, baseline (lr 0.05, 5 epochs) ===
+epoch 1/5, average loss: 1.9406
+epoch 2/5, average loss: 1.7621
+epoch 3/5, average loss: 1.6930
+epoch 4/5, average loss: 1.6493
+epoch 5/5, average loss: 1.6176
+training time: 5.01 seconds
+  darcy -> ['bingley', 'collins', 'wickham', 'gardiner', 'morris', 'denny', 'coolly', 'jones']
+  elizabeth -> ['jane', 'mary', 'bennet', 'charlotte', 'gardiner', 'directly', 'fitzwilliam', 'astonished']
+  mother -> ['ladyship', 'sister', 'uncle', 'aunt', 'anne', 'father', 'niece', 'brother']
+  said -> ['replied', 'added', 'cried', 'answered', 'yes', 'poor', 'shocked', 'smiling']
+  london -> ['silent', 'brighton', 'whist', 'bed', 'gradually', 'fearing', 'dress', 'exerting']
+
+=== D = 100, baseline (lr 0.05, 5 epochs) ===
+epoch 1/5, average loss: 1.9446
+epoch 2/5, average loss: 1.7654
+epoch 3/5, average loss: 1.6951
+epoch 4/5, average loss: 1.6504
+epoch 5/5, average loss: 1.6179
+training time: 8.48 seconds
+  darcy -> ['collins', 'bingley', 'wickham', 'gardiner', 'unnecessarily', 'austen', 'bennet', 'jones']
+  elizabeth -> ['mary', 'jane', 'bennet', 'charlotte', 'maria', 'aloud', 'smoothly', 'gardiner']
+  mother -> ['uncle', 'father', 'ladyship', 'niece', 'brother', 'sister', 'maria', 'coughs']
+  said -> ['added', 'replied', 'cried', 'poor', 'smiling', 'yes', 'observed', 'shocked']
+  london -> ['town', 'hertfordshire', 'thrown', 'march', 'luckily', 'called', 'gracechurch', 'tuesday']
+
+=== D = 200, baseline (lr 0.05, 5 epochs) ===
+epoch 1/5, average loss: 1.9469
+epoch 2/5, average loss: 1.7673
+epoch 3/5, average loss: 1.6965
+epoch 4/5, average loss: 1.6523
+epoch 5/5, average loss: 1.6210
+training time: 15.76 seconds
+  darcy -> ['bingley', 'collins', 'wickham', 'gardiner', 'jones', 'bennet', 'denny', 'leigh']
+  elizabeth -> ['mary', 'jane', 'bennet', 'charlotte', 'unluckily', 'gardiner', 'laughingly', 'aloud']
+  mother -> ['uncle', 'father', 'ladyship', 'sister', 'blushing', 'aunt', 'anne', 'niece']
+  said -> ['cried', 'added', 'yes', 'replied', 'colouring', 'abominable', 'poor', 'observed']
+  london -> ['dwelt', 'noticed', 'bed', 'shortly', 'gradually', 'town', 'driven', 'silent']
+
+##### PART 2: D = 50, changing gradient descent settings #####
+
+=== D = 50, lr_0.025 (lr 0.025, 5 epochs) ===
+epoch 1/5, average loss: 2.0166
+epoch 2/5, average loss: 1.8528
+epoch 3/5, average loss: 1.7770
+epoch 4/5, average loss: 1.7364
+epoch 5/5, average loss: 1.7132
+training time: 5.12 seconds
+  darcy -> ['collins', 'bingley', 'wickham', 'bennet', 'gardiner', 'lucas', 'forster', 'long']
+  elizabeth -> ['jane', 'charlotte', 'she', 'bennet', 'colonel', 'mary', 'immediately', 'fitzwilliam']
+  mother -> ['sister', 'father', 'ladyship', 'uncle', 'aunt', 'brother', 'daughter', 'friend']
+  said -> ['replied', 'yes', 'cried', 'indeed', 'rejoiced', 'added', 'thus', 'poor']
+  london -> ['meryton', 'town', 'talked', 'pemberley', 'prepared', 'hertfordshire', 'whist', 'home']
+  darcy: 4/8 neighbors same as baseline
+  elizabeth: 5/8 neighbors same as baseline
+  mother: 6/8 neighbors same as baseline
+  said: 5/8 neighbors same as baseline
+  london: 1/8 neighbors same as baseline
+
+=== D = 50, lr_0.1 (lr 0.1, 5 epochs) ===
+epoch 1/5, average loss: 1.8850
+epoch 2/5, average loss: 1.7272
+epoch 3/5, average loss: 1.6528
+epoch 4/5, average loss: 1.5924
+epoch 5/5, average loss: 1.5419
+training time: 4.96 seconds
+  darcy -> ['collins', 'bingley', 'robinson', 'wickham', 'morris', 'denny', 'jones', 'teased']
+  elizabeth -> ['mary', 'luckless', 'brightening', 'originate', 'jane', 'occupation', 'teased', 'allayed']
+  mother -> ['father', 'grandfather', 'sister', 'coughs', 'ladyship', 'niece', 'anne', 'trunk']
+  said -> ['smiling', 'angrily', 'cried', 'faintly', 'eliza', 'ma', 'willed', 'fervently']
+  london -> ['town', 'bed', 'gradually', 'ran', 'protesting', 'came', 'broken', 'whither']
+  darcy: 6/8 neighbors same as baseline
+  elizabeth: 2/8 neighbors same as baseline
+  mother: 5/8 neighbors same as baseline
+  said: 2/8 neighbors same as baseline
+  london: 2/8 neighbors same as baseline
+
+=== D = 50, epochs_15 (lr 0.05, 15 epochs) ===
+epoch 1/15, average loss: 1.9374
+epoch 2/15, average loss: 1.7581
+epoch 3/15, average loss: 1.6907
+epoch 4/15, average loss: 1.6473
+epoch 5/15, average loss: 1.6120
+epoch 6/15, average loss: 1.5839
+epoch 7/15, average loss: 1.5584
+epoch 8/15, average loss: 1.5381
+epoch 9/15, average loss: 1.5168
+epoch 10/15, average loss: 1.5011
+epoch 11/15, average loss: 1.4852
+epoch 12/15, average loss: 1.4707
+epoch 13/15, average loss: 1.4587
+epoch 14/15, average loss: 1.4475
+epoch 15/15, average loss: 1.4380
+training time: 14.50 seconds
+  darcy -> ['bingley', 'collins', 'wickham', 'jones', 'robinson', 'complimenting', 'morris', 'teased']
+  elizabeth -> ['jane', 'slightly', 'though', 'laughingly', 'brightening', 'restrain', 'invention', 'recollecting']
+  mother -> ['sister', 'wit', 'stepped', 'pressing', 'father', 'grandfather', 'niece', 'husband']
+  said -> ['shocked', 'faintly', 'remember', 'smiling', 'likes', 'essentials', 'ma', 'entertained']
+  london -> ['town', 'bed', 'came', 'march', 'finally', 'stairs', 'charing', 'exhausted']
+  darcy: 5/8 neighbors same as baseline
+  elizabeth: 1/8 neighbors same as baseline
+  mother: 3/8 neighbors same as baseline
+  said: 2/8 neighbors same as baseline
+  london: 1/8 neighbors same as baseline

@@ -1,0 +1,4 @@
+settings.json
+/analysis_plots
+.DS_Store
+**/__pycache__/
